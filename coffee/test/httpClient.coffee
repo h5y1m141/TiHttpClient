@@ -13,4 +13,7 @@ describe 'httpClient', ->
     it 'has a number of retry', ->
       expect(@client.retryCount).toBe 2
 
+    it 'has a waitTime parameter', ->
+      expect(@client.retryWaitTime).toBe 1000
+
 

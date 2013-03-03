@@ -12,8 +12,11 @@ describe('httpClient', function() {
     return expect(this.client.httpTimeout).toBe(5000);
   });
   return describe('had retry parameter', function() {
-    return it('has a number of retry', function() {
+    it('has a number of retry', function() {
       return expect(this.client.retryCount).toBe(2);
+    });
+    return it('has a waitTime parameter', function() {
+      return expect(this.client.retryWaitTime).toBe(1000);
     });
   });
 });
