@@ -5,7 +5,10 @@ describe('httpClient', function() {
     httpClient = require('httpClient');
     return this.client = new httpClient();
   });
-  return it('should be object', function() {
+  it('should be object', function() {
     return expect(typeof this.client).toBe("object");
+  });
+  return it('has Timeout seconds', function() {
+    return expect(this.client.httpTimeout).toBe(5000);
   });
 });
