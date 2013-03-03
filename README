@@ -1,18 +1,16 @@
-Welcome to your Appcelerator Titanium Mobile Project
+# TitaniumのHTTPClientをベースにしたユーティリティライブラリ
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
-
+## これは何？
 
 
-----------------------------------
-Stuff our legal folk make us say:
 
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
+[JavaScriptとTitaniumではじめる iPhone/Androidアプリプログラミング ](http://www.amazon.co.jp/exec/obidos/ASIN/4839941084/)の執筆をされている森さんが[【13日目】イベント機構＆リトライ機構を組み込んだHTTPClient (Titanium Mobile)](http://d.hatena.ne.jp/sngmr/20121213/1355335270)というエントリを書かれた際に、以下の様なことを書かれていたので、それにインスパイアされてCoffee Script で書いた作ったユーティリティライブラリ
 
-Titanium is Copyright (c) 2008-2012 by Appcelerator, Inc. All Rights Reserved.
-
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
+>  1. 通信結果を取得するコールバック関数をcreateHTTPClient時に書かないといけない
+>
+>　→ View のように addEventListener な感じで書きたい
+>
+>　2. 通信環境があまり安定しないスマートフォン向けだけどリトライがない
+>
+>　→ もちろん呼び出し元でやればいいんだけどさ
 
