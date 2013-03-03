@@ -9,4 +9,8 @@ describe 'httpClient', ->
   it 'has Timeout seconds', ->
     expect(@client.httpTimeout).toBe 5000
 
+  describe 'had retry parameter', ->
+    it 'has a number of retry', ->
+      expect(@client.retryCount).toBe 2
+
 

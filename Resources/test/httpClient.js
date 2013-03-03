@@ -8,7 +8,12 @@ describe('httpClient', function() {
   it('should be object', function() {
     return expect(typeof this.client).toBe("object");
   });
-  return it('has Timeout seconds', function() {
+  it('has Timeout seconds', function() {
     return expect(this.client.httpTimeout).toBe(5000);
+  });
+  return describe('had retry parameter', function() {
+    return it('has a number of retry', function() {
+      return expect(this.client.retryCount).toBe(2);
+    });
   });
 });
