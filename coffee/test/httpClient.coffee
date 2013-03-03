@@ -9,11 +9,15 @@ describe 'httpClient', ->
   it 'has Timeout seconds', ->
     expect(@client.httpTimeout).toBe 5000
 
+  it 'has a xhr object', ->
+    expect(@client.http).toBe true
+
   describe 'had retry parameter', ->
     it 'has a number of retry', ->
       expect(@client.retryCount).toBe 2
 
     it 'has a waitTime parameter', ->
       expect(@client.retryWaitTime).toBe 1000
+
 
 
