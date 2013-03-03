@@ -1,8 +1,7 @@
 describe 'httpClient', ->
-  before each ->
-    @httpClient = require 'lib/httpClient'
+  beforeEach ->
+    httpClient = require('httpClient')
+    @client = new httpClient()
 
-
-describe 'initialize', ->
   it 'should be object', ->
-    expect(typeof @httpClient).toBe "object"
+    expect(typeof @client).toBe "object"

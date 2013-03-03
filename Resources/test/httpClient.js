@@ -1,12 +1,11 @@
 
 describe('httpClient', function() {
-  return before(each(function() {
-    return this.httpClient = require('lib/httpClient');
-  }));
-});
-
-describe('initialize', function() {
+  beforeEach(function() {
+    var httpClient;
+    httpClient = require('httpClient');
+    return this.client = new httpClient();
+  });
   return it('should be object', function() {
-    return expect(typeof this.httpClient).toBe("object");
+    return expect(typeof this.client).toBe("object");
   });
 });
