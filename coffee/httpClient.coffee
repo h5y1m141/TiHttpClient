@@ -12,7 +12,20 @@ class httpClient
     # リトライ用に保存しておくHttpClient用パラメータ
     @saveMethod = ""
     @saveUrl = ""
-    @saveData = null    
+    @saveData = null
+
+    # HTTPClientを生成する
+    @http = Ti.Network.createHTTPClient(
+      onload: (e) ->
+        # self.onloadHandler e
+        return true
+
+      onerror: (error) ->
+        # self.onerrorHandler error
+        return true
+
+      timeout: @httpTimeout
+    )    
 
 
 module.exports = httpClient    

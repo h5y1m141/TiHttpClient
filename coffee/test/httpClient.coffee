@@ -9,8 +9,8 @@ describe 'httpClient', ->
   it 'has Timeout seconds', ->
     expect(@client.httpTimeout).toBe 5000
 
-  it 'has a xhr object', ->
-    expect(@client.http).toBe true
+  it 'has Ti.NetworkHttpClient object', ->
+    expect(typeof @client.http).toBe "object"
 
   describe 'had retry parameter', ->
     it 'has a number of retry', ->

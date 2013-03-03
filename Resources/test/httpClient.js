@@ -11,8 +11,8 @@ describe('httpClient', function() {
   it('has Timeout seconds', function() {
     return expect(this.client.httpTimeout).toBe(5000);
   });
-  it('has a xhr object', function() {
-    return expect(this.client.http).toBe(true);
+  it('has Ti.NetworkHttpClient object', function() {
+    return expect(typeof this.client.http).toBe("object");
   });
   return describe('had retry parameter', function() {
     it('has a number of retry', function() {

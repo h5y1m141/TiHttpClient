@@ -11,6 +11,15 @@ httpClient = (function() {
     this.saveMethod = "";
     this.saveUrl = "";
     this.saveData = null;
+    this.http = Ti.Network.createHTTPClient({
+      onload: function(e) {
+        return true;
+      },
+      onerror: function(error) {
+        return true;
+      },
+      timeout: this.httpTimeout
+    });
   }
 
   return httpClient;
